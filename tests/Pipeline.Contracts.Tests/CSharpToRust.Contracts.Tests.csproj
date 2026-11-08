@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Pipeline.Contracts\Pipeline.Contracts.csproj" />
+    <ProjectReference Include="..\..\src\Pipeline.Contracts\CSharpToRust.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

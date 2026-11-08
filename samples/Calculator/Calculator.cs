@@ -8,13 +8,6 @@ public static class Calculator
 
     public static decimal Multiply(decimal left, decimal right) => left * right;
 
-    public static decimal Divide(decimal dividend, decimal divisor)
-    {
-        if (divisor == 0m)
-        {
-            throw new DivideByZeroException("Cannot divide by zero.");
-        }
-
-        return dividend / divisor;
-    }
+    public static decimal Divide(decimal dividend, decimal divisor) 
+        => divisor == 0m ? throw new DivideByZeroException("Cannot divide by zero.") : dividend / divisor;
 }

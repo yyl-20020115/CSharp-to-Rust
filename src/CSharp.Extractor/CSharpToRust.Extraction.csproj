@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\Pipeline.Contracts\CSharpToRust.Contracts.csproj" />
     <ProjectReference Include="..\Pipeline.Contracts\Pipeline.Contracts.csproj" />
     <PackageReference Include="Microsoft.Build.Locator" Version="1.11.2" />
     <PackageReference Include="Microsoft.Build.Tasks.Core" Version="18.11.0" />
@@ -15,7 +16,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+<PropertyGroup>
+  <DisableMSBuildAssemblyCopyCheck>true</DisableMSBuildAssemblyCopyCheck>
+</PropertyGroup>
   <ItemGroup>
     <InternalsVisibleTo Include="CSharp.Extractor.Tests" />
   </ItemGroup>

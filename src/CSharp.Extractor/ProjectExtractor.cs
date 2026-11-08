@@ -113,7 +113,7 @@ public static class ProjectExtractor
     // directory the repository happens to sit in. Without this, the same commit yields a
     // different id per checkout, per CI working directory and per user, and artifacts cannot be
     // handed between machines or cached by id.
-    internal static string ComputeExtractionId(ExtractionArtifact artifact)
+    public static string ComputeExtractionId(ExtractionArtifact artifact)
     {
         var root = artifact.RootDirectory;
         artifact.RootDirectory = "";
@@ -131,7 +131,7 @@ public static class ProjectExtractor
     // Emitted relative to the artifact so a consumer resolves the sources from the artifact's own
     // location rather than from an absolute path baked in on another machine. Falls back to the
     // absolute path when no relative path exists, such as a different volume.
-    internal static string PortableRoot(string root, string output)
+    public static string PortableRoot(string root, string output)
     {
         var artifactDirectory = Path.GetDirectoryName(Path.GetFullPath(output));
         if (string.IsNullOrEmpty(artifactDirectory)) return root;

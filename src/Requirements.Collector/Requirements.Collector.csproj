@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Pipeline.Contracts\Pipeline.Contracts.csproj" />
+    <ProjectReference Include="..\Pipeline.Contracts\CSharpToRust.Contracts.csproj" />
     <InternalsVisibleTo Include="Requirements.Collector.Tests" />
   </ItemGroup>
   <ItemGroup>

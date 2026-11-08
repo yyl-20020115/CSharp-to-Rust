@@ -8,7 +8,9 @@
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
-
+	<PropertyGroup>
+		<DisableMSBuildAssemblyCopyCheck>true</DisableMSBuildAssemblyCopyCheck>
+	</PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Build.Tasks.Core" Version="18.11.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
@@ -24,8 +26,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\CSharp.Extractor\CSharp.Extractor.csproj" />
-    <ProjectReference Include="..\..\samples\Calculator\Calculator.csproj" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\..\src\CSharp.Extractor\CSharpToRust.Extraction.csproj" />
+    <ProjectReference Include="..\..\samples\Calculator\CalculatorSample.csproj" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\..\src\Pipeline.Contracts\CSharpToRust.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
